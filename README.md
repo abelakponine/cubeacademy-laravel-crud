@@ -34,12 +34,6 @@ This application is a blog post editor built using Laravel for the backend and a
    composer install
    ```
 
-3. **Install Frontend Dependencies:**
-   ```bash
-   npm install
-   npm run dev
-   ```
-
 4. **Environment Configuration:**
    - Copy `.env.example` to `.env` and configure your environment variables, including database credentials and application settings.
    ```bash
