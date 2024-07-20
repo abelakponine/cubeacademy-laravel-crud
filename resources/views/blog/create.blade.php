@@ -123,6 +123,8 @@
         console.log('Test', <?=$auth?>);
         let csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 
+        const AuthToken = JSON.parse(localStorage.getItem('user')).token;
+
         function savePost() {
             const author_id = JSON.parse(localStorage.getItem('user')).id;
             const authorName = JSON.parse(localStorage.getItem('user')).authorName;
@@ -132,8 +134,6 @@
             // Send the data to the server
             const url = "<?php echo route('api.create'); ?>";
             const data = { author_id, author:authorName, email, title, content, publish_at: '<?=now()?>' };
-
-            const AuthToken = JSON.parse(localStorage.getItem('user')).token;
 
             fetch(url, {
                 method: 'POST',
