@@ -61,6 +61,11 @@ This application is a blog post editor built using Laravel for the backend and a
    php artisan serve
    ```
 
+7. **Run PHPUnit test:**
+   ```bash
+   php artisan test
+   ```
+
 ## Usage
 
 ### Login Page
