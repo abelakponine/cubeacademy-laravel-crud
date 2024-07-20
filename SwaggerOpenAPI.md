@@ -20,7 +20,8 @@
     "author": "John Doe",
     "email": "john@example.com",
     "title": "New Blog Post",
-    "content": "This is the content of the blog post."
+    "content": "This is the content of the blog post.",
+    "publish_at": "This is the date of when to publish post."
 }
 ```
 
@@ -30,6 +31,7 @@
 + `email` (string): Email of the author (format: email).
 + `title` (string): Title of the post.
 + `content` (string): Content of the post.
++ `publish_at` (string): Date sting of when to publish post - nullable.
 
 **Responses**
 **201 Created**
@@ -48,6 +50,8 @@ Content: `application/json`
         "email": "john@example.com",
         "title": "New Blog Post",
         "content": "This is the content of the blog post.",
+        "publish_at": "This is the date of when to publish post.",
+        "updated_at": "2024-07-21T12:34:56Z"
         "created_at": "2024-07-20T12:34:56Z",
         "updated_at": "2024-07-20T12:34:56Z"
     }
@@ -76,7 +80,8 @@ curl -X POST "http://your-api-url/v1/create" \
            "author": "John Doe",
            "email": "john@example.com",
            "title": "New Blog Post",
-           "content": "This is the content of the blog post."
+           "content": "This is the content of the blog post.",
+           "publish_at": "This is the date of when to publish post."
          }'
 ```
 
@@ -94,6 +99,7 @@ Example Response
         "email": "john@example.com",
         "title": "New Blog Post",
         "content": "This is the content of the blog post.",
+        "publish_at": "This is the date of when to publish post.",
         "created_at": "2024-07-20T12:34:56Z",
         "updated_at": "2024-07-20T12:34:56Z"
     }
